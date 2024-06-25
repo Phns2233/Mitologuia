@@ -39,7 +39,7 @@ public class Player: MonoBehaviour
             anim.SetLayerWeight(2,0);
         }
         if(Input.GetKeyDown(KeyCode.S))
-        {
+        {   
             anim.SetLayerWeight(1,0);
         }
         if(Input.GetKeyDown(KeyCode.A))
