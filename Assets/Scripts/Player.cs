@@ -3,7 +3,7 @@ using UnityEngine.Video;
 
 public class Player: MonoBehaviour
 {
-    public float moveH;
+    private float moveH;
     public float moveV;
     public int velocidade;
     public int  attack;
@@ -14,7 +14,9 @@ public class Player: MonoBehaviour
     private Rigidbody2D rb;
     public Animator anim;
     public SpriteRenderer sprite;
-    
+
+    public global::System.Single MoveH { get => moveH; set => moveH = value; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +26,9 @@ public class Player: MonoBehaviour
     }
 
     private void FixedUpdate() {
-         moveH = Input.GetAxis("Horizontal");
+         MoveH = Input.GetAxis("Horizontal");
         moveV = Input.GetAxis("Vertical");
-        transform.position += new Vector3(moveH * velocidade * Time.deltaTime,moveV * velocidade * Time.deltaTime,0);
+        transform.position += new Vector3(MoveH * velocidade * Time.deltaTime,moveV * velocidade * Time.deltaTime,0);
     }
 
     // Update is called once per frame
@@ -36,11 +38,11 @@ public class Player: MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.W) )
         {
-            anim.SetLayerWeight(2,0);
+            anim.SetLayerWeight(2,1);
         }
         if(Input.GetKeyDown(KeyCode.S))
         {   
-            anim.SetLayerWeight(1,0);
+            anim.SetLayerWeight(1,1);
         }
         if(Input.GetKeyDown(KeyCode.A))
         {
@@ -52,8 +54,14 @@ public class Player: MonoBehaviour
             sprite.flipX = true;
             anim.SetLayerWeight(1,0);
         }
-        
+        if(moveH == 0 && moveV == 0 )
+        {
+            anim.SetLayerWeight(2,0);
+            anim.SetLayerWeight(1,0);
+            anim.SetLayerWeight(0,1);
         }
+        
+    }
         public int VidasdoPlayer()
         {
             return vidas;

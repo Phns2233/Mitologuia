@@ -54,13 +54,11 @@ public class Inimigo : MonoBehaviour
                 anim.SetLayerWeight(0,1);
                 spriteR.flipY = true;
             }
-
-        }
-        if(this.gameObject.CompareTag("Player"))
+       /*if(this.gameObject.CompareTag("Player"))
         {
             Destroy(this.gameObject);
+        }*/
         }
-        
     }
 
     private void OnTriggerEnter2D(Collider2D other) 

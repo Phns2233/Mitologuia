@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8674251596797095734}
   - component: {fileID: 2267569812209739443}
   - component: {fileID: 1853096804579579046}
-  - component: {fileID: 2085755582334088757}
   - component: {fileID: 1761037647099335780}
   - component: {fileID: 6030714675443764566}
   - component: {fileID: 637094941415804467}
@@ -86,7 +85,7 @@ SpriteRenderer:
   m_Size: {x: 10.216667, y: 12.904156}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!111 &1853096804579579046
@@ -105,84 +104,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!60 &2085755582334088757
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3186730668106030435}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.216667, y: 12.904156}
-    newSize: {x: 10.216667, y: 12.904156}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 3.027606, y: -6.451112}
-      - {x: 3.496356, y: -5.982362}
-      - {x: 5.136981, y: -3.6854868}
-      - {x: 5.136981, y: -2.0917368}
-      - {x: 3.027606, y: -0.5448618}
-      - {x: 4.011981, y: -0.12298679}
-      - {x: 4.199481, y: 0.3457632}
-      - {x: 5.136981, y: 0.4863882}
-      - {x: 5.136981, y: 2.9238882}
-      - {x: 4.527606, y: 4.048888}
-      - {x: 3.215106, y: 5.642638}
-      - {x: 1.199481, y: 6.486388}
-      - {x: -0.394269, y: 6.486388}
-      - {x: -0.863019, y: 6.064513}
-      - {x: -1.894269, y: 5.548888}
-      - {x: -2.081769, y: 4.986388}
-      - {x: -4.050519, y: 4.986388}
-      - {x: -4.613019, y: 4.423888}
-      - {x: -4.706769, y: 3.7207632}
-      - {x: -4.613019, y: 2.6895132}
-      - {x: -4.706769, y: 0.5332632}
-      - {x: -4.238019, y: -0.12298679}
-      - {x: -2.503644, y: -0.9667368}
-      - {x: -3.488019, y: -0.9667368}
-      - {x: -4.097394, y: -1.4354868}
-      - {x: -5.128644, y: -1.9042368}
-      - {x: -5.128644, y: -3.7792368}
-      - {x: -3.581769, y: -3.8261118}
-      - {x: -3.675519, y: -5.888612}
-      - {x: -3.066144, y: -6.451112}
-      - {x: -0.675519, y: -6.451112}
-      - {x: -0.15989399, y: -6.076112}
-      - {x: 0.636981, y: -6.451112}
-  m_UseDelaunayMesh: 0
 --- !u!114 &1761037647099335780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +116,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c763f9089819c4a8a4eec549f77e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveH: 0
   moveV: 0
   velocidade: 5
   attack: 0
