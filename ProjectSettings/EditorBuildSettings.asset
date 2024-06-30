@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Caverna.unity
     guid: 01f0aff25145925478140654d5a4b0a7
+  - enabled: 1
+    path: Assets/Scenes/SalaBoss.unity
+    guid: 74072842a1d24434eb929f8bc6e6d680
+  - enabled: 1
+    path: Assets/Scenes/batalha.unity
+    guid: 9a2e225d7bc3951439dbe36fc626705e
   m_configObjects: {}

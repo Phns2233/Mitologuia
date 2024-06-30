@@ -12,7 +12,7 @@ public class Inimigo : MonoBehaviour
     public Animator anim;
     private bool isFollowing = true; // Variável de controle do estado de seguir
     private Rigidbody2D rb;
-    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -54,14 +54,14 @@ public class Inimigo : MonoBehaviour
                 anim.SetLayerWeight(0,1);
                 spriteR.flipY = true;
             }
-       /*if(this.gameObject.CompareTag("Player"))
-        {
-            Destroy(this.gameObject);
-        }*/
+            if(this.gameObject.CompareTag("Player"))
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) 
+        private void OnTriggerEnter2D(Collider2D other) 
     {
         if (other.gameObject.CompareTag("Player"))
         {
