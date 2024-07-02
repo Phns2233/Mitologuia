@@ -47,12 +47,12 @@ public class Inimigo : MonoBehaviour
             if (player.position.x > transform.position.x )
             {
               anim.SetLayerWeight(0,1);
-              spriteR.flipY = false;
+              //spriteR.flipY = false;
             }
             else if(player.position.x < transform.position.x)
             {
                 anim.SetLayerWeight(0,1);
-                spriteR.flipY = true;
+                //spriteR.flipY = true;
             }
             if(this.gameObject.CompareTag("Player"))
             {
@@ -61,11 +61,11 @@ public class Inimigo : MonoBehaviour
         }
     }
 
-        private void OnTriggerEnter2D(Collider2D other) 
+   /*     private void OnTriggerEnter2D(Collider2D other) 
     {
         if (other.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene("batalha");
         }
-    }
+    }*/
 }

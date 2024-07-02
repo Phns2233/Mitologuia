@@ -1,4 +1,6 @@
+using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
 public class Player: MonoBehaviour
@@ -14,6 +16,8 @@ public class Player: MonoBehaviour
     private Rigidbody2D rb;
     public Animator anim;
     public SpriteRenderer sprite;
+    public string nomePorta;
+    public bool entrada;
 
     public global::System.Single MoveH { get => moveH; set => moveH = value; }
 
@@ -23,6 +27,7 @@ public class Player: MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        DontDestroyOnLoad(this.gameObject);
     }
 
     private void FixedUpdate() {
@@ -95,10 +100,26 @@ public class Player: MonoBehaviour
                 comVida = false;
             }
         }
-        public void tomardano()
+
+
+        private void OnTriggerEnter2D(Collider2D other)
         {
+            if(other.gameObject.CompareTag("portal"))
+            {
+                nomePorta = other.gameObject.GetComponent<porta>().NomePortal();
+                entrada = other.gameObject.GetComponent<porta>().EntradaOuSaida();
+            }
         }
         
-}
+        private void OnTriggerStay2D(Collider2D other) 
+        {
+            if(other.gameObject.CompareTag("portal"))
+            {
+                SceneManager.LoadScene(other.gameObject.GetComponent<porta>().NomeCena());
+            }
+        }
+            
+    }
+
  
 
