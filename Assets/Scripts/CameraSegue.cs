@@ -9,6 +9,7 @@ public class CameraSegue : MonoBehaviour
     public float px;
     public float py;
     public Vector3 posInincial;
+    public float smoothCam;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +35,9 @@ public class CameraSegue : MonoBehaviour
              transform.position = posInincial;
 
         }
+          Vector3 smoothPosition = Vector3.Lerp(transform.position, boundPosition, smoothCam * Time.deltaTime);
+        transform.position = smoothPosition;
+
     }
 
 }
